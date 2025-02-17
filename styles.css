@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #eaebf0; /* Café pastel claro */
     color: #222;
+    line-height: 1.6;
 }
 
 /* Header */
@@ -20,7 +21,7 @@ header {
 .logo {
     width: 300px; /* Usar el ancho de la imagen original */
     height: 120px; /* Usar la altura de la imagen original */
-    margin: center ; /* Centrar el logo */
+    margin: center; /* Centrar el logo */
     display: block;
 }
 
@@ -86,7 +87,6 @@ nav a:hover {
     background-color: #A38668;
     border-color: #A38668;
 }
-
 
 /* Servicios */
 .services {
@@ -175,4 +175,77 @@ footer {
 
 .social-links a:hover {
     color: #A38668;
+}
+
+/* Media Queries para Responsividad */
+
+/* Dispositivos pequeños (móviles en vertical) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+        display: block;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 200px;
+        height: 80px;
+    }
+
+    .banner-text {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    .quote form {
+        width: 100%;
+    }
+}
+
+/* Dispositivos medianos (tabletas en vertical) */
+@media (max-width: 1023px) {
+    .service-container {
+        gap: 15px;
+    }
+
+    .service-card {
+        width: 45%;
+    }
+
+    .quote form {
+        width: 80%;
+    }
+
+    .banner-text {
+        font-size: 24px;
+    }
+}
+
+/* Dispositivos grandes (pantallas de escritorio) */
+@media (min-width: 1200px) {
+    .service-card {
+        width: 30%;
+    }
 }
